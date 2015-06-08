@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.test.asus.bluetoothtestapp"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile files('libs/AndroidBluetoothLibrary-1.0.1-20140503.130306-1.jar')
+    compile 'de.greenrobot:eventbus:2.2.0'
+    compile 'io.palaima:smoothbluetooth:0.1.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.0'
+    compile 'com.android.support:support-annotations:20.0.0'
+    compile files('libs/sugar-1.2.jar')
+    compile 'com.github.AigeStudio:DatePicker:e40e9a84a6'
+    compile 'com.jjoe64:graphview:4.0.1'
+    compile files('libs/androidplot-core-0.6.1.jar')
+    compile files('libs/achartengine-1.1.0.jar')
+    /*compile 'com.github.lecho:hellocharts-android:viewport-rectf-model'*/
+}

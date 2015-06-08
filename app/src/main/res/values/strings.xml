@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BluetoothTestApp</string>
+
+    <string name="fb_login">Facebook Login</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_buffer">BufferActivity</string>
+    <string name="title_activity_start_action">StartActionActivity</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_sign_in">SignIn</string>
+    <string name="title_activity_graphic">GraphicActivity</string>
+    <string name="title_activity_facebook_login">FacebookLogin</string>
+    <string name="date_picker"><i>tap to add date</i></string>
+    <string name="title_activity_test_graph">TestGraph</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>
