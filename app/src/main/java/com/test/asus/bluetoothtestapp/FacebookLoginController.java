@@ -9,7 +9,7 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 
 
-public class FacebookLogin extends Activity {
+public class FacebookLoginController extends Activity {
     int DIALOG_DATE = 1;
     int myYear = 2011;
     int myMonth = 02;

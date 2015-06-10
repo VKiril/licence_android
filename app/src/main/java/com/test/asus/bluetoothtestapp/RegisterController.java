@@ -27,7 +27,7 @@ import java.util.Calendar;
 import java.util.List;
 
 
-public class Register extends Activity implements OnClickListener {
+public class RegisterController extends Activity implements OnClickListener {
 
     public EditText  et_name;
     public EditText  et_surname;
@@ -97,7 +97,7 @@ public class Register extends Activity implements OnClickListener {
 
                 String email = et_email.getText().toString().replace("\n","");
                 if(!isValidEmail(email)){
-                    Toast.makeText(Register.this, "invalid email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterController.this, "invalid email", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 strBuff.append(myDay);
@@ -124,7 +124,7 @@ public class Register extends Activity implements OnClickListener {
                         e.printStackTrace();
                     }
                 } else{
-                    Toast.makeText(Register.this, "password must have four or more characters", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterController.this, "password must have four or more characters", Toast.LENGTH_SHORT).show();
                 }
 
                 final String gender = ((RadioButton)findViewById(radioGroup.getCheckedRadioButtonId() )).getText().toString();
@@ -132,7 +132,7 @@ public class Register extends Activity implements OnClickListener {
 
 
 
-                User user = new User(Register.this);
+                User user = new User(RegisterController.this);
 
                 List<User> userExist = user.find(User.class, "name = ?  and surname = ?", name, surname);
 
@@ -190,7 +190,7 @@ public class Register extends Activity implements OnClickListener {
         public void onDateSet(DatePicker view, int year, int monthOfYear,
                               int dayOfMonth) {
             if(year >= thisYear){
-                Toast.makeText(Register.this, "wrong year, you enter current year, this is impossible "
+                Toast.makeText(RegisterController.this, "wrong year, you enter current year, this is impossible "
                         , Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -204,7 +204,7 @@ public class Register extends Activity implements OnClickListener {
         }
     };
 
-    private static void initDate(){
+    public static void initDate(){
         Calendar cal= Calendar.getInstance();
 
         SimpleDateFormat day = new SimpleDateFormat("dd");

@@ -32,5 +32,5 @@ dependencies {
     compile 'com.jjoe64:graphview:4.0.1'
     compile files('libs/androidplot-core-0.6.1.jar')
     compile files('libs/achartengine-1.1.0.jar')
-    /*compile 'com.github.lecho:hellocharts-android:viewport-rectf-model'*/
+   /* compile "com.androidplot:androidplot-core:0.6.1"*/
 }

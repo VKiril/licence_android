@@ -7,7 +7,6 @@
 
 
     <RelativeLayout
-        android:alpha="0.9"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginTop="70dp"
@@ -15,6 +14,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:background="#ff052f69"
+        android:alpha="0.9"
         android:clickable="true"
         android:focusable="true"
         android:padding="15dp"

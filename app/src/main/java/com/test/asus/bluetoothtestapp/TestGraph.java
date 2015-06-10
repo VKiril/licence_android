@@ -24,6 +24,8 @@ public class TestGraph extends Activity {
     private View mChart;
     private String[] mMonth = new String[] {
             "Jan", "Feb" , "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug" , "Sep", "Oct", "Nov", "Dec",
+            "Jan", "Feb" , "Mar", "Apr", "May", "Jun",
             "Jul", "Aug" , "Sep", "Oct", "Nov", "Dec"
     };
 

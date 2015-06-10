@@ -9,9 +9,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileOperations {
+public class FileController {
     String path = "/sdcard/com.licence/";
-    public FileOperations() {
+    public FileController() {
 
     }
 

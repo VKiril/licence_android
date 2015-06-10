@@ -9,9 +9,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <uses-sdk
-    android:minSdkVersion="8"
-    android:targetSdkVersion="21" />
 
 
     <!-- android:icon="@mipmap/ic_launcher" -->
@@ -45,19 +42,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BufferActivity"
+            android:name=".BluetoothController"
             android:label="@string/title_activity_buffer" >
         </activity>
         <activity
-            android:name=".StartActionActivity"
-            android:label="@string/title_activity_start_action" >
-        </activity>
-        <activity
-            android:name=".Login"
+            android:name=".LoginController"
             android:label="@string/title_activity_login" >
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".RegisterController"
             android:label="@string/title_activity_sign_in" >
         </activity>
         <activity
@@ -65,7 +58,7 @@
             android:label="@string/title_activity_graphic" >
         </activity>
         <activity
-            android:name=".FacebookLogin"
+            android:name=".FacebookLoginController"
             android:label="@string/title_activity_facebook_login" >
         </activity>
         <activity
