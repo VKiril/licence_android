@@ -20,16 +20,21 @@ public class SampleDynamicXYDatasource_o implements Runnable {
         private int sinAmp = 1;
         private Observable_o notifier;
         private boolean keepRunning = false;
+        public double data ;
+
 
         {
             notifier = new Observable_o();
+        }
+        public SampleDynamicXYDatasource_o(double data){
+            this.data = data ;
         }
 
         public void stopThread() {
             keepRunning = false;
         }
 
-        //@Override
+        @Override
         public void run() {
             try {
                 keepRunning = true;
@@ -71,15 +76,16 @@ public class SampleDynamicXYDatasource_o implements Runnable {
             if (index >= SAMPLE_SIZE) {
                 throw new IllegalArgumentException();
             }
+
             double angle = (index + (phase))/FREQUENCY;
             double amp = sinAmp * Math.sin(angle);
             switch (series) {
                 case SINE1:
+                    //System.out.println(-amp);
                     return -amp;
                 case SINE2:
-                    BluetoothController b = new BluetoothController();
-                    amp = b.incomingByte*1.f ;
-                    return amp;
+
+                    return this.data;
                 default:
                     throw new IllegalArgumentException();
             }
@@ -91,6 +97,10 @@ public class SampleDynamicXYDatasource_o implements Runnable {
 
         public void removeObserver(Observer observer) {
             notifier.deleteObserver(observer);
+        }
+
+        public void setSineAmp(int sine){
+            this.sinAmp = sine ;
         }
 
     }

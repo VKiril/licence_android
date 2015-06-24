@@ -9,8 +9,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-
-
     <!-- android:icon="@mipmap/ic_launcher" -->
     <application
         android:name="com.orm.SugarApp"
@@ -54,7 +52,7 @@
             android:label="@string/title_activity_sign_in" >
         </activity>
         <activity
-            android:name=".GraphicActivity"
+            android:name=".SkipController"
             android:label="@string/title_activity_graphic" >
         </activity>
         <activity
@@ -64,13 +62,17 @@
         <activity
             android:name=".TestGraph"
             android:label="@string/title_activity_test_graph"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
-                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+        </activity>
+        <activity
+            android:name=".DinamycPlot"
+            android:label="@string/title_activity_dinamyc_plot" >
         </activity>
     </application>
 

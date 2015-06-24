@@ -20,7 +20,7 @@ import java.util.List;
 
 
 public class LoginController extends Activity implements OnClickListener {
-     EditText login_username;
+     EditText login_email;
      EditText login_password;
      Button loginBtn ;
 
@@ -30,7 +30,7 @@ public class LoginController extends Activity implements OnClickListener {
         setContentView(R.layout.activity_login);
 
         login_password = (EditText)findViewById(R.id.et_password);
-        login_username = (EditText)findViewById(R.id.et_login);
+        login_email = (EditText)findViewById(R.id.et_login);
         loginBtn = (Button) findViewById(R.id.btn_login);
         loginBtn.setOnClickListener(this);
 
@@ -52,12 +52,12 @@ public class LoginController extends Activity implements OnClickListener {
 
                 User user = new User(getApplicationContext());
                 String pass = login_password.getText().toString();
-                String userName = login_username.getText().toString();
-                List<User> result = user.find(User.class, "nickName = ?  and surname = ?", userName, pass);
+                String email = login_email.getText().toString();
+                List<User> result = user.find(User.class, "email = ?  and password = ?", email, pass);
                 if(!result.isEmpty()){
                     for(User u : result ){
                         editor.putString("userId",u.getId().toString());
-                        Intent intent = new Intent(LoginController.this, GraphicActivity.class);
+                        Intent intent = new Intent(LoginController.this, SkipController.class);
                         startActivity(intent);
                     }
                     editor.commit();

@@ -31,11 +31,9 @@ public class MainActivity extends AppCompatActivity  implements OnClickListener 
 
         Button skipBtn = (Button) findViewById(R.id.skip);
         skipBtn.setOnClickListener(this);
-        Button test = (Button)findViewById(R.id.test_id);
-        test.setOnClickListener(this);
 
-        Button graphBtn = (Button) findViewById(R.id.btn_graph);
-        graphBtn.setOnClickListener(this);
+        Button plot = (Button) findViewById(R.id.dinamic_plot);
+        plot.setOnClickListener(this);
 
     }
 
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity  implements OnClickListener 
         Intent intent = null;
         switch (v.getId()){
             case R.id.skip:
-                intent = new Intent(MainActivity.this, GraphicActivity.class);
+                intent = new Intent(MainActivity.this, SkipController.class);
                 startActivity(intent);
                 break;
             case R.id.fbLogin:
@@ -58,15 +56,11 @@ public class MainActivity extends AppCompatActivity  implements OnClickListener 
             case R.id.login:
                 intent = new Intent(MainActivity.this, LoginController.class);
                 startActivity(intent);
-                //List<User> test = User.listAll(User.class);
                 break;
-            case R.id.test_id:
-                intent = new Intent(MainActivity.this, BluetoothController.class);
+            case R.id.dinamic_plot:
+                intent = new Intent(MainActivity.this, DinamycPlot.class);
                 startActivity(intent);
                 break;
-            case R.id.btn_graph:
-                intent = new Intent(MainActivity.this, TestGraph.class);
-                startActivity(intent);
 
         }
     }

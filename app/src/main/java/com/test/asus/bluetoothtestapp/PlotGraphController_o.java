@@ -20,6 +20,7 @@ public class PlotGraphController_o extends Activity {
     private PlotUpdater_o plotUpdater;
     SampleDynamicXYDatasource_o data;
     private Thread myThread;
+    double temp =  0 ;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class PlotGraphController_o extends Activity {
         dynamicPlot.getGraphWidget().setDomainValueFormat(new DecimalFormat("0"));
 
         // getInstance and position datasets:
-        data = new SampleDynamicXYDatasource_o();
+        data = new SampleDynamicXYDatasource_o(temp);
         SampleDynamicSeries_o sine1Series = new SampleDynamicSeries_o(data, 0, "Sine 1");
         SampleDynamicSeries_o sine2Series = new SampleDynamicSeries_o(data, 1, "Sine 2");
 

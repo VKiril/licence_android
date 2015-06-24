@@ -33,7 +33,7 @@
             android:layout_marginTop="60dp"
             android:text="Login"
             android:id="@+id/login"
-            android:background="#ff7350ff"
+            android:background="#ff5b39ff"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:textColor="#ffffffff"
@@ -47,7 +47,7 @@
             android:layout_marginTop="30dp"
             android:text="Register "
             android:id="@+id/signIn"
-            android:background="#ff7350ff"
+            android:background="#ff5b39ff"
             android:layout_below="@+id/login"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -61,7 +61,7 @@
             android:layout_marginTop="30dp"
             android:text="Login with facebook"
             android:id="@+id/fbLogin"
-            android:background="#ff7350ff"
+            android:background="#ff5b39ff"
             android:layout_below="@+id/signIn"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -75,7 +75,7 @@
             android:layout_marginTop="30dp"
             android:text="Skip"
             android:id="@+id/skip"
-            android:background="#ff7350ff"
+            android:background="#ff5b39ff"
             android:layout_below="@+id/fbLogin"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -85,11 +85,11 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:background="@drawable/true_health_assessment"
+            android:background="@drawable/health_wellness"
             android:layout_below="@+id/skip"
             android:layout_marginTop="30dp"
             >
-            <Button
+         <!--   <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="test"
@@ -104,7 +104,17 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true" />
-
+-->
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/dinamic_plot"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"
+                android:layout_alignParentStart="true" />
         </RelativeLayout>
 
     </RelativeLayout>

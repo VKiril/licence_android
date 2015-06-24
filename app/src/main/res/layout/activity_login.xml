@@ -37,13 +37,13 @@
             android:orientation="horizontal"
             android:paddingTop="20px">
 
-            <TextView
+           <!-- <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10px"
                 android:paddingTop="20px"
                 android:textColor="#FFFFFF"
-                android:text="Username "/>
+                android:text="Username "/>-->
 
         </LinearLayout>
 
@@ -57,14 +57,14 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="10px"
                 android:textColor="#FFFFFF"
-                android:text="or email"/>
+                android:text="Email"/>
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.50"
-                android:layout_marginLeft="65px"
-                android:hint="user name or email"
+                android:layout_marginLeft="100px"
+                android:hint="email"
                 android:id="@+id/et_login"/>
 
         </LinearLayout>

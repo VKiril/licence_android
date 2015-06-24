@@ -3,6 +3,7 @@ package com.test.asus.bluetoothtestapp;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -24,6 +25,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 
@@ -46,6 +48,7 @@ public class RegisterController extends Activity implements OnClickListener {
     public static int thisYear ;
     public static int myMonth ;
     public static int myDay ;
+    public static String dateTime;
 
 
     @Override
@@ -166,7 +169,10 @@ public class RegisterController extends Activity implements OnClickListener {
                         Toast.makeText(getApplicationContext(), "Inserted into database",Toast.LENGTH_SHORT).show();
                     }
                 },2000);
+                Intent intent = new Intent(RegisterController.this, SkipController.class);
+                startActivity(intent);
                 break;
+
 
 
         }
@@ -232,6 +238,10 @@ public class RegisterController extends Activity implements OnClickListener {
         } catch(NumberFormatException nfe) {
             Log.d("error", nfe.getMessage());
         }
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+        dateTime = sdf.format(new Date());
+
     }
 
     public final static boolean isValidEmail(CharSequence target) {

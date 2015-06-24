@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BluetoothTestApp</string>
+    <string name="app_name">LicenceProject</string>
 
     <string name="fb_login">Facebook Login</string>
     <string name="action_settings">Settings</string>
@@ -13,4 +13,5 @@
     <string name="title_activity_test_graph">TestGraph</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_dinamyc_plot">DinamycPlot</string>
 </resources>

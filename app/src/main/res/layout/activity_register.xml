@@ -60,6 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.50"
+                    android:hint="your first name"
                     android:layout_marginLeft="120px"
                     android:paddingTop="20px"
                     android:id="@+id/et_first_name"/>
@@ -88,6 +89,7 @@
                     android:layout_weight="0.50"
                     android:layout_marginLeft="120px"
                     android:paddingTop="20px"
+                    android:hint="your last name "
                     android:id="@+id/et_last_name"/>
 
             </LinearLayout>
@@ -114,6 +116,7 @@
                     android:layout_weight="0.50"
                     android:layout_marginLeft="120px"
                     android:paddingTop="20px"
+                    android:hint="your nick name"
                     android:id="@+id/et_user_name"/>
 
             </LinearLayout>
@@ -206,6 +209,7 @@
                     android:layout_weight="0.50"
                     android:layout_marginLeft="120px"
                     android:paddingTop="20px"
+                    android:hint="add a number (in kg)"
                     android:id="@+id/et_body_mass"/>
 
             </LinearLayout>
@@ -233,6 +237,7 @@
                     android:layout_weight="0.50"
                     android:layout_marginLeft="150px"
                     android:paddingTop="20px"
+                    android:hint="add a number (in meters)"
                     android:id="@+id/et_height"/>
 
             </LinearLayout>
@@ -261,6 +266,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="130px"
                     android:layout_weight="0.50"
+                    android:hint="minimum 4 characters"
                     android:inputType="textPassword"
                     android:paddingTop="20px"
                     android:id="@+id/et_password"/>
@@ -363,6 +369,8 @@
                 android:id="@+id/btn_register"/>
 
         </LinearLayout>
+
+
 
     </RelativeLayout>
 

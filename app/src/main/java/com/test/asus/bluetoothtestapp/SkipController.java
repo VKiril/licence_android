@@ -1,6 +1,7 @@
 package com.test.asus.bluetoothtestapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +11,7 @@ import android.widget.EditText;
 
 import com.test.asus.bluetoothtestapp.Helpers.DemoBase;
 
-public class GraphicActivity extends DemoBase {
+public class SkipController extends DemoBase {
     EditText derivation ;
     String deriv ;
     @Override
@@ -23,9 +24,9 @@ public class GraphicActivity extends DemoBase {
             @Override
             public void onClick(View v) {
                 deriv = derivation.getText().toString();
-                //Intent intent = new Intent(GraphicActivity.this,  PlotGraphController_o.class);
-                //intent.putExtra("derivation", deriv);
-                //startActivity(intent);
+                Intent intent = new Intent(SkipController.this,  BluetoothController.class);
+                intent.putExtra("derivation", deriv);
+                startActivity(intent);
             }
         });
 
